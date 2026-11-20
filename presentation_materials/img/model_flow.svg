@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1500" height="620" viewBox="0 0 1500 620">
+
+  <defs>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise"
+                    baseFrequency="0.015"
+                    numOctaves="2"
+                    seed="4"
+                    result="noise"/>
+      <feDisplacementMap in="SourceGraphic"
+                         in2="noise"
+                         scale="1.8"/>
+    </filter>
+
+    <marker id="arrow"
+            markerWidth="13"
+            markerHeight="13"
+            refX="10"
+            refY="6"
+            orient="auto">
+      <path d="M0,0 L12,6 L0,12"
+            fill="none"
+            stroke="#243746"
+            stroke-width="2"/>
+    </marker>
+
+    <style>
+      .hand {
+        font-family: "Comic Sans MS", "Segoe Print", "Bradley Hand", cursive;
+        fill: #243746;
+      }
+
+      .label {
+        font-family: "Comic Sans MS", "Segoe Print", "Bradley Hand", cursive;
+        font-weight: 700;
+        fill: #243746;
+      }
+
+      .box {
+        fill: #fffef8;
+        stroke: #243746;
+        stroke-width: 3;
+        stroke-linejoin: round;
+      }
+
+      .arrow-line {
+        fill: none;
+        stroke: #243746;
+        stroke-width: 3;
+        stroke-linecap: round;
+        marker-end: url(#arrow);
+      }
+
+      .note {
+        fill: #fff4b8;
+        stroke: #243746;
+        stroke-width: 2.5;
+      }
+    </style>
+  </defs>
+
+  <!-- Whiteboard background -->
+  <rect width="1500" height="620" fill="#fbfaf3"/>
+
+  <!-- Title -->
+  <text x="750" y="65"
+        text-anchor="middle"
+        class="label"
+        font-size="34">
+    From chat question to evidence
+  </text>
+
+  <path d="M450 82 C650 91, 870 76, 1050 84"
+        fill="none"
+        stroke="#e2b93f"
+        stroke-width="5"
+        stroke-linecap="round"/>
+
+  <!-- 1. User -->
+  <g transform="rotate(-1 145 270)">
+    <rect x="55" y="180" width="190" height="180"
+          rx="18" class="box" filter="url(#paper)"/>
+
+    <!-- person icon -->
+    <circle cx="150" cy="235" r="25"
+            fill="none" stroke="#243746" stroke-width="3"/>
+    <path d="M108 315 C113 275, 187 275, 192 315"
+          fill="none" stroke="#243746" stroke-width="3"
+          stroke-linecap="round"/>
+
+    <text x="150" y="342"
+          text-anchor="middle"
+          class="label"
+          font-size="25">
+      User
+    </text>
+  </g>
+
+  <text x="150" y="405"
+        text-anchor="middle"
+        class="hand"
+        font-size="19">
+    asks in the chat app
+  </text>
+
+  <!-- Arrow 1 -->
+  <path d="M260 270 C300 255, 320 255, 355 270"
+        class="arrow-line"/>
+
+  <!-- 2. Model discovers/selects -->
+  <g transform="rotate(1 470 270)">
+    <rect x="365" y="160" width="270" height="220"
+          rx="18" class="box" filter="url(#paper)"/>
+
+    <!-- model / brain icon -->
+    <path d="M455 245
+             C435 220, 455 195, 480 205
+             C493 180, 535 188, 538 215
+             C565 212, 575 245, 555 260
+             C565 288, 530 305, 510 287
+             C490 310, 450 294, 458 270
+             C438 270, 430 253, 455 245 Z"
+          fill="none" stroke="#243746" stroke-width="3"
+          stroke-linejoin="round"/>
+
+    <path d="M480 215 L480 280
+             M510 205 L510 286
+             M458 245 L540 245"
+          fill="none" stroke="#243746" stroke-width="2"/>
+
+    <text x="500" y="330"
+          text-anchor="middle"
+          class="label"
+          font-size="24">
+      Model
+    </text>
+
+    <text x="500" y="355"
+          text-anchor="middle"
+          class="hand"
+          font-size="18">
+      discovers and selects
+    </text>
+
+    <text x="500" y="377"
+          text-anchor="middle"
+          class="hand"
+          font-size="18">
+      an MCP tool
+    </text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M650 270 C685 255, 710 255, 745 270"
+        class="arrow-line"/>
+
+  <!-- 3. MCP server -->
+  <g transform="rotate(-1 850 270)">
+    <rect x="755" y="160" width="245" height="220"
+          rx="18" class="box" filter="url(#paper)"/>
+
+    <!-- server icon -->
+    <rect x="815" y="205" width="125" height="34"
+          rx="7" fill="none" stroke="#243746" stroke-width="3"/>
+    <rect x="815" y="252" width="125" height="34"
+          rx="7" fill="none" stroke="#243746" stroke-width="3"/>
+    <circle cx="835" cy="222" r="5" fill="#243746"/>
+    <circle cx="835" cy="269" r="5" fill="#243746"/>
+    <path d="M855 222 L920 222 M855 269 L920 269"
+          stroke="#243746" stroke-width="3"
+          stroke-linecap="round"/>
+
+    <text x="877" y="330"
+          text-anchor="middle"
+          class="label"
+          font-size="23">
+      MCP server
+    </text>
+
+    <text x="877" y="357"
+          text-anchor="middle"
+          class="hand"
+          font-size="18">
+      receives the tool call
+    </text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M1015 270 C1050 255, 1075 255, 1110 270"
+        class="arrow-line"/>
+
+  <!-- 4. Databricks / RD table -->
+  <g transform="rotate(1 1200 270)">
+    <rect x="1115" y="145" width="300" height="250"
+          rx="18" class="box" filter="url(#paper)"/>
+
+    <!-- database cylinder -->
+    <ellipse cx="1265" cy="205" rx="68" ry="22"
+             fill="#f3d7a0" stroke="#243746" stroke-width="3"/>
+    <path d="M1197 205 L1197 285
+             C1197 297, 1228 307, 1265 307
+             C1302 307, 1333 297, 1333 285
+             L1333 205"
+          fill="#f3d7a0" stroke="#243746" stroke-width="3"/>
+    <path d="M1198 245 C1198 257, 1228 267, 1265 267
+             C1302 267, 1332 257, 1332 245"
+          fill="none" stroke="#243746" stroke-width="3"/>
+
+    <text x="1265" y="335"
+          text-anchor="middle"
+          class="label"
+          font-size="22">
+      RD obligations table
+    </text>
+
+    <text x="1265" y="363"
+          text-anchor="middle"
+          class="hand"
+          font-size="18">
+      in Databricks
+    </text>
+
+    <text x="1265" y="386"
+          text-anchor="middle"
+          class="hand"
+          font-size="17">
+      MCP server queries the data
+    </text>
+  </g>
+
+<!-- float fema -->
+  <g transform="rotate(-1 1000 530)">
+    <rect x="1290" y="440" width="130" height="90"
+          rx="18" class="box" filter="url(#paper)"/>
+
+    <text x="1350" y="460"
+          text-anchor="middle"
+          class="label"
+          font-size="18">
+      optional: 
+    </text>
+    <text x="1350" y="490"
+          text-anchor="middle"
+          class="label"
+          font-size="22">
+      FEMA API
+    </text>
+  </g>
+
+
+  <!-- Return path -->
+  <path d="M1265 430
+           C1265 505, 930 530, 675 500
+           C625 494, 600 470, 600 470"
+        class="arrow-line"/>
+
+  <text x="930" y="510"
+        text-anchor="middle"
+        class="hand"
+        font-size="20">
+    returned evidence
+  </text>
+
+  <!-- 5. Model explains -->
+  <g transform="rotate(-1 440 530)">
+    <rect x="270" y="440" width="390" height="125"
+          rx="18" class="note" filter="url(#paper)"/>
+
+    <text x="465" y="480"
+          text-anchor="middle"
+          class="label"
+          font-size="25">
+      Model explains the result
+    </text>
+
+    <text x="465" y="513"
+          text-anchor="middle"
+          class="hand"
+          font-size="19">
+      what the evidence shows —
+    </text>
+
+    <text x="465" y="540"
+          text-anchor="middle"
+          class="hand"
+          font-size="19">
+      and what its scope and limits are
+    </text>
+  </g>
+
+  <!-- Small handwritten note -->
+  <text x="750" y="595"
+        text-anchor="middle"
+        class="hand"
+        font-size="18"
+        fill="#5b6b73">
+    question → tool call → data → grounded explanation
+  </text>
+
+</svg>

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling==1.33.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-rdg"
+version = "0.1.0"
+description = "MCP server for Rural Data Gateway data in Databricks"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "databricks-sql-connector==4.8.0",
+    "mcp==1.30.0",
+]
+
+[project.scripts]
+mcp-rdg = "mcp_rdg.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_rdg"]

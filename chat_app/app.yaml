@@ -1,0 +1,10 @@
+command:
+  - streamlit
+  - run
+  - app.py
+
+env:
+  - name: MCP_SERVER_URL
+    valueFrom: mcp-server-url
+  - name: SERVING_ENDPOINT
+    valueFrom: serving-endpoint

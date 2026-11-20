@@ -1,0 +1,103 @@
+:root {
+  --rdg-ink: #173a32;
+  --rdg-green: #17483c;
+  --rdg-leaf: #4a8065;
+  --rdg-coral: #d65b43;
+  --rdg-paper: #f5f7f2;
+  --rdg-muted: #52645c;
+}
+
+body { background: var(--rdg-paper); }
+.reveal {
+  color: var(--rdg-ink);
+  font-family: "Segoe UI", "Aptos", sans-serif;
+  font-size: 30px;
+}
+.reveal .slides { text-align: left; }
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 0.65em 1.15em 1.1em;
+}
+.reveal h1, .reveal h2, .reveal h3 {
+  color: var(--rdg-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.reveal h1 { font-size: 2em; line-height: 1.08; }
+.reveal h2 {
+  border-bottom: 3px solid var(--rdg-coral);
+  font-size: 1.35em;
+  line-height: 1.15;
+  margin: 0 0 0.55em;
+  padding-bottom: 0.2em;
+  width: fit-content;
+}
+.reveal p, .reveal li, .reveal td, .reveal th {
+  font-size: 0.68em;
+  line-height: 1.4;
+}
+.reveal ul, .reveal ol { margin: 0.35em 0 0 1em; }
+.reveal li { margin: 0.35em 0; }
+.reveal li::marker { color: var(--rdg-coral); }
+.reveal strong { color: var(--rdg-green); }
+.reveal blockquote {
+  background: #e6eee7;
+  border-left: 5px solid var(--rdg-leaf);
+  box-shadow: none;
+  margin: 0.7em 0;
+  padding: 0.45em 0.75em;
+  width: auto;
+}
+.reveal table { border-collapse: collapse; margin: 0.4em 0; }
+.reveal th { color: var(--rdg-green); }
+.reveal th, .reveal td { border-bottom: 1px solid #cbd6ce; padding: 0.35em 0.5em; }
+.reveal .controls { color: var(--rdg-coral); }
+.reveal .progress { color: var(--rdg-coral); height: 4px; }
+.reveal .slides > section:first-of-type {
+  color: #fff;
+  text-align: left;
+}
+.reveal .slides > section:first-of-type::before {
+  background: url("../assets/rd-white-lockup-4x.png") left center / contain no-repeat;
+  content: "";
+  display: block;
+  height: 1.25em;
+  margin-bottom: 0.6em;
+  width: 7em;
+}
+.reveal .slides > section:first-of-type h1,
+.reveal .slides > section:first-of-type h2,
+.reveal .slides > section:first-of-type p { color: #fff; }
+.reveal .slides > section:first-of-type h1,
+.reveal .slides > section:first-of-type h2 {
+  border: 0;
+  font-size: 2.2em;
+  margin-top: 0.2em;
+}
+.reveal .slides > section:first-of-type h3 {
+  color: #fff;
+  font-family: "Segoe UI", "Aptos", sans-serif;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-top: 0.25em;
+  max-width: 24em;
+}
+.reveal .slides > section:first-of-type img {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  max-height: 1.25em;
+  width: auto;
+}
+@media (max-width: 600px) {
+  .reveal { font-size: 24px; }
+  .reveal .slides section { padding: 0.5em 0.7em 1em; }
+}
+.reveal .slides > section:first-of-type img {
+  display: block;
+  max-height: 1.25em;
+  width: auto;
+}

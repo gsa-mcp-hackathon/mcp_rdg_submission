@@ -1,0 +1,5 @@
+mcp>=1.10,<2
+databricks-sql-connector>=4.0
+databricks-sdk>=0.30
+pandas>=2.0
+requests>=2.31

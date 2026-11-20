@@ -1,0 +1,5 @@
+/.quarto/
+**/*.quarto_ipynb
+/deck.html
+/deck_files/
+*.pdf
