@@ -34,7 +34,7 @@ reference calculations and limitations.
 
 ## See the Demo
 
-[![Watch the video](https://raw.githubusercontent.com/gsa-mcp-hackathon/mcp_rdg_submission/branch/assets/mcp_demo_thumbnail.png)](https://raw.githubusercontent.com/gsa-mcp-hackathon/mcp_rdg_submission/branch/assets/mcp_demo.mp4)
+[![Watch the video](https://raw.githubusercontent.com/gsa-mcp-hackathon/mcp_rdg_submission/main/assets/mcp_demo_thumbnail.png)](https://raw.githubusercontent.com/gsa-mcp-hackathon/mcp_rdg_submission/main/assets/mcp_demo.mp4)
 
 
 ## Repository Map
